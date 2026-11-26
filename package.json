@@ -4,6 +4,10 @@
   "description": "Plano de fundo animado (CSS puro) de uma personagem no VS Code, configurável por um arquivo JSON.",
   "version": "0.0.11",
   "publisher": "local",
+  "author": {
+    "name": "Artur Costa",
+    "url": "https://github.com/noiceartur"
+  },
   "icon": "midia/icone.png",
   "license": "MIT",
   "repository": {
