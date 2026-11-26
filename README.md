@@ -7,6 +7,79 @@ do seu tema (feita para temas escuros, como o Dracula).
 Arte de **The Muun** ([YouTube](https://www.youtube.com/channel/UCw3rXoJK9CDhENV-ZifmEDg) ·
 [Ko-fi](https://ko-fi.com/themuunlofi)), usada com autorização. Veja os [créditos](#créditos).
 
+## Guia de instalação
+
+### Requisitos
+
+- VS Code **1.80 ou mais novo**, a versão de computador (Windows, macOS ou Linux). Não funciona no VS Code no
+  navegador (vscode.dev, github.dev ou Codespaces pelo navegador).
+- Um tema escuro. A arte é misturada com o fundo pelo modo `screen`, então num tema claro ela praticamente some.
+
+### 1. Baixe a extensão
+
+Baixe o arquivo `fundo-personagem-<versão>.vsix` da página de
+[Releases](https://github.com/noiceartur/VS-code-animated-wallpaper/releases).
+
+Se preferir gerar o arquivo a partir do código (requer [Node.js](https://nodejs.org) 18 ou mais novo):
+
+```bash
+git clone https://github.com/noiceartur/VS-code-animated-wallpaper.git
+cd VS-code-animated-wallpaper
+npm run package
+```
+
+### 2. Instale no VS Code
+
+**Pela interface:**
+
+1. Abra a aba **Extensions** (`Ctrl+Shift+X`; no macOS, `Cmd+Shift+X`).
+2. Clique nos três pontos (`...`) no canto de cima da aba.
+3. Escolha **Install from VSIX...** e selecione o arquivo `.vsix` que você baixou.
+
+**Ou pelo terminal:**
+
+```bash
+code --install-extension fundo-personagem-<versão>.vsix
+```
+
+### 3. Primeira abertura
+
+1. Depois de instalar, a extensão aplica o fundo e **recarrega a janela sozinha uma vez**. A tela pisca rapidamente
+   e a personagem aparece.
+2. O VS Code vai mostrar o aviso *"Your Code installation appears to be corrupt"* e pode exibir `[Unsupported]` no
+   título da janela. Isso acontece porque a extensão altera um arquivo de CSS do VS Code. Não é um problema: clique na
+   engrenagem do aviso e escolha **Don't Show Again**.
+3. Se o fundo não aparecer, abra a paleta de comandos (`Ctrl+Shift+P`), rode **Fundo Personagem: Aplicar** e clique
+   em **Recarregar janela**.
+
+### Erro de permissão
+
+A extensão precisa gravar na pasta onde o VS Code está instalado. Se aparecer um erro de permissão:
+
+- **Windows:** a instalação "System" (em `Program Files`) é protegida. Abra o VS Code como administrador uma vez e
+  rode **Fundo Personagem: Aplicar**, ou troque para o instalador "User", que não precisa disso.
+- **macOS:** deixe o VS Code na pasta **Aplicativos**. Aberto direto da pasta Downloads, ele roda num local só de
+  leitura.
+- **Linux:** em instalações pelo `.deb` ou `.rpm`, a pasta do VS Code pertence ao root. Dê permissão ao seu usuário
+  (por exemplo, `sudo chown -R $(whoami) /usr/share/code`) ou use a versão `.tar.gz`. A versão **Snap não funciona**,
+  porque os arquivos dela são só de leitura.
+
+### Atualizar
+
+Instale o `.vsix` da versão nova do mesmo jeito, por cima da antiga. Suas configurações são mantidas.
+
+Quando o próprio VS Code atualiza, ele restaura o CSS original. A extensão percebe isso ao abrir, reaplica o fundo e
+recarrega a janela uma vez, sem você fazer nada.
+
+### Desinstalar
+
+1. Rode **Fundo Personagem: Remover fundo** (`Ctrl+Shift+P`) e clique em **Recarregar janela**. Isso devolve o CSS
+   original do VS Code.
+2. Depois, desinstale a extensão na aba **Extensions**.
+
+Se desinstalar sem remover antes, o fundo continua aparecendo até a próxima atualização do VS Code. Para tirar na
+hora, instale a extensão de novo e siga o passo 1.
+
 ## Destaques técnicos
 
 - **Animação quadro a quadro em CSS puro.** Os 7 desenhos da fumaça e as 5 poses da piscada foram extraídos de um
@@ -41,18 +114,6 @@ o CSS em disco é mais novo do que o que a janela carregou, ela recarrega a jane
 o fundo aparecer já na primeira abertura depois de uma atualização, com uma piscada rápida da janela. Uma marca por
 janela (`workspaceState`) impede que ela recarregue em loop. Isso também vale para várias janelas restauradas ao mesmo
 tempo.
-
-## Instalar
-
-1. Baixe o `.vsix` da página de *Releases* ou gere o seu (veja [Desenvolvimento](#desenvolvimento)).
-2. No VS Code: **Extensions** → `...` → **Install from VSIX...**
-3. A janela recarrega sozinha e o fundo aparece.
-
-> O VS Code vai avisar que a instalação parece "corrompida" e pode mostrar `[Unsupported]` no título. Isso acontece
-> porque o CSS dele foi alterado. Pode dispensar o aviso. Para desfazer tudo, use **Fundo Personagem: Remover fundo**.
-
-Se a extensão não tiver permissão para gravar na pasta do VS Code (instalação "System"), abra o VS Code como
-administrador uma vez ou use a instalação "User".
 
 ## Comandos
 
