@@ -4,6 +4,9 @@ Extensão para o VS Code que coloca uma personagem animada como plano de fundo d
 piscada são animadas **só com CSS**, sem vídeo, canvas ou JavaScript rodando na janela. As cores continuam sendo as
 do seu tema (feita para temas escuros, como o Dracula).
 
+Arte de **The Muun** ([YouTube](https://www.youtube.com/channel/UCw3rXoJK9CDhENV-ZifmEDg) ·
+[Ko-fi](https://ko-fi.com/themuunlofi)), usada com autorização. Veja os [créditos](#créditos).
+
 ## Destaques técnicos
 
 - **Animação quadro a quadro em CSS puro.** Os 7 desenhos da fumaça e as 5 poses da piscada foram extraídos de um
@@ -124,9 +127,13 @@ config com erro e falta de permissão.
 
 ## Créditos
 
-Arte e animação originais: **The Muun**, no vídeo
-[youtube.com/watch?v=93Sfl5rRBGw](https://www.youtube.com/watch?v=93Sfl5rRBGw). As imagens em `imagens/` e o ícone em
-`midia/` foram feitos a partir desse vídeo e são usados com a autorização do autor.
+Arte e animação originais de **The Muun**, usadas com a autorização do autor. Apoie o trabalho dele:
+
+- YouTube: [The Muun](https://www.youtube.com/channel/UCw3rXoJK9CDhENV-ZifmEDg)
+- Ko-fi: [ko-fi.com/themuunlofi](https://ko-fi.com/themuunlofi)
+- Vídeo original: [youtube.com/watch?v=93Sfl5rRBGw](https://www.youtube.com/watch?v=93Sfl5rRBGw)
+
+As imagens em `imagens/` e o ícone em `midia/` foram feitos a partir desse vídeo.
 
 ## Licença
 
