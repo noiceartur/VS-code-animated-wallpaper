@@ -6,7 +6,7 @@ A VS Code extension that puts an animated character in the editor background. Th
 animated with **CSS only**: no video, no canvas and no JavaScript running in the window. Your theme's colors stay as
 they are (made for dark themes such as Dracula).
 
-https://github.com/user-attachments/assets/3534158e-cb31-4838-a3a4-58fe4d69ea03
+https://github.com/user-attachments/assets/053f7ba8-85cc-40c9-b728-2ccca11a9496
 
 Art by **The Muun** ([YouTube](https://www.youtube.com/channel/UCw3rXoJK9CDhENV-ZifmEDg) ·
 [Ko-fi](https://ko-fi.com/themuunlofi)), used with permission. See [credits](#credits).

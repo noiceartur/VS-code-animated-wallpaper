@@ -6,7 +6,7 @@ Extensão para o VS Code que coloca uma personagem animada como plano de fundo d
 piscada são animadas **só com CSS**, sem vídeo, canvas ou JavaScript rodando na janela. As cores continuam sendo as
 do seu tema (feita para temas escuros, como o Dracula).
 
-https://github.com/user-attachments/assets/3534158e-cb31-4838-a3a4-58fe4d69ea03
+https://github.com/user-attachments/assets/053f7ba8-85cc-40c9-b728-2ccca11a9496
 
 Arte de **The Muun** ([YouTube](https://www.youtube.com/channel/UCw3rXoJK9CDhENV-ZifmEDg) ·
 [Ko-fi](https://ko-fi.com/themuunlofi)), usada com autorização. Veja os [créditos](#créditos).
