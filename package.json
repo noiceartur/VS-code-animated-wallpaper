@@ -1,0 +1,50 @@
+{
+  "name": "fundo-personagem",
+  "displayName": "Fundo Personagem",
+  "description": "Plano de fundo animado (CSS puro) de uma personagem no VS Code, configurável por um arquivo JSON.",
+  "version": "0.0.7",
+  "publisher": "local",
+  "icon": "midia/icone.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noiceartur/VS-code-animated-wallpaper"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fundoPersonagem.abrirConfig",
+        "title": "Fundo Personagem: Abrir config"
+      },
+      {
+        "command": "fundoPersonagem.abrirPasta",
+        "title": "Fundo Personagem: Abrir pasta de imagens"
+      },
+      {
+        "command": "fundoPersonagem.aplicar",
+        "title": "Fundo Personagem: Aplicar"
+      },
+      {
+        "command": "fundoPersonagem.remover",
+        "title": "Fundo Personagem: Remover fundo"
+      }
+    ]
+  },
+  "extensionKind": [
+    "ui"
+  ],
+  "scripts": {
+    "test": "node teste/css.test.js && node teste/extensao.test.js",
+    "package": "npx @vscode/vsce package --allow-star-activation --no-rewrite-relative-links"
+  }
+}
