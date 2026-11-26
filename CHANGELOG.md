@@ -1,16 +1,12 @@
 # Changelog
 
-## 0.0.10
+## 0.0.11
 
-- Ícone: o cabelo preto também ficou transparente, como no plano de fundo. Só a pele, os olhos e os traços continuam opacos.
+- Ícone de volta ao original da 0.0.7 (rosto com a mão, fundo preto).
 
-## 0.0.9
+## 0.0.8 a 0.0.10
 
-- Ícone: os braços somem suavemente nas bordas, sem nenhum corte reto (PNG sem fundo).
-
-## 0.0.8
-
-- Ícone sem o quadrado preto: só o fundo em volta da personagem ficou transparente; ela continua opaca.
+- Testes de ícone com fundo transparente. Descartados na 0.0.11.
 
 ## 0.0.7
 
