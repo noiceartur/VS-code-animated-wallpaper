@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.9
+
+- Ícone: os braços somem suavemente nas bordas, sem nenhum corte reto (PNG sem fundo).
+
 ## 0.0.8
 
 - Ícone sem o quadrado preto: só o fundo em volta da personagem ficou transparente; ela continua opaca.
