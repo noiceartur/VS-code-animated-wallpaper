@@ -2,3 +2,4 @@ teste/**
 .gitignore
 .vscodeignore
 *.vsix
+*.zip

@@ -17,8 +17,8 @@ Arte de **The Muun** ([YouTube](https://www.youtube.com/channel/UCw3rXoJK9CDhENV
 
 ### 1. Baixe a extensão
 
-Baixe o arquivo `fundo-personagem-<versão>.vsix` da página de
-[Releases](https://github.com/noiceartur/VS-code-animated-wallpaper/releases).
+Baixe o arquivo `fundo-personagem-<versão>.zip` da página de
+[Releases](https://github.com/noiceartur/VS-code-animated-wallpaper/releases) e extraia o `.vsix` que está dentro dele.
 
 Se preferir gerar o arquivo a partir do código (requer [Node.js](https://nodejs.org) 18 ou mais novo):
 
