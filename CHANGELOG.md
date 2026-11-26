@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.10
+
+- Ícone: o cabelo preto também ficou transparente, como no plano de fundo. Só a pele, os olhos e os traços continuam opacos.
+
 ## 0.0.9
 
 - Ícone: os braços somem suavemente nas bordas, sem nenhum corte reto (PNG sem fundo).
