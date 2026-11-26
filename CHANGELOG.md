@@ -2,7 +2,7 @@
 
 ## 0.0.8
 
-- Ícone com fundo transparente: o preto some e o rosto se mistura ao tema, como no plano de fundo.
+- Ícone sem o quadrado preto: só o fundo em volta da personagem ficou transparente; ela continua opaca.
 
 ## 0.0.7
 
