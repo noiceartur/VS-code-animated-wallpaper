@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.8
+
+- Ícone com fundo transparente: o preto some e o rosto se mistura ao tema, como no plano de fundo.
+
 ## 0.0.7
 
 - Ícone da extensão: o rosto da personagem com a mão.

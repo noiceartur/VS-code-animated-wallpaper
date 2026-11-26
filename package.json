@@ -2,7 +2,7 @@
   "name": "fundo-personagem",
   "displayName": "Fundo Personagem",
   "description": "Plano de fundo animado (CSS puro) de uma personagem no VS Code, configurável por um arquivo JSON.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "local",
   "icon": "midia/icone.png",
   "license": "MIT",
