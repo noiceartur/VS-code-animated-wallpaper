@@ -1,26 +1,31 @@
 # Fundo Personagem
 
-Extensão para o VS Code que coloca uma personagem animada como plano de fundo do editor. A fumaça do cigarro e a
-piscada são animadas **só com CSS**, sem vídeo, canvas ou JavaScript rodando na janela. As cores continuam sendo as
-do seu tema (feita para temas escuros, como o Dracula).
+**English** · [Português](README.pt-BR.md)
 
-Arte de **The Muun** ([YouTube](https://www.youtube.com/channel/UCw3rXoJK9CDhENV-ZifmEDg) ·
-[Ko-fi](https://ko-fi.com/themuunlofi)), usada com autorização. Veja os [créditos](#créditos).
+A VS Code extension that puts an animated character in the editor background. The cigarette smoke and the blinking are
+animated with **CSS only**: no video, no canvas and no JavaScript running in the window. Your theme's colors stay as
+they are (made for dark themes such as Dracula).
 
-## Guia de instalação
+Art by **The Muun** ([YouTube](https://www.youtube.com/channel/UCw3rXoJK9CDhENV-ZifmEDg) ·
+[Ko-fi](https://ko-fi.com/themuunlofi)), used with permission. See [credits](#credits).
 
-### Requisitos
+> "Fundo Personagem" is Portuguese for "character background". The command names and config keys are in Portuguese;
+> this README translates each one.
 
-- VS Code **1.80 ou mais novo**, a versão de computador (Windows, macOS ou Linux). Não funciona no VS Code no
-  navegador (vscode.dev, github.dev ou Codespaces pelo navegador).
-- Um tema escuro. A arte é misturada com o fundo pelo modo `screen`, então num tema claro ela praticamente some.
+## Installation guide
 
-### 1. Baixe a extensão
+### Requirements
 
-Baixe o arquivo `fundo-personagem-<versão>.zip` da página de
-[Releases](https://github.com/noiceartur/VS-code-animated-wallpaper/releases) e extraia o `.vsix` que está dentro dele.
+- VS Code **1.80 or newer**, desktop version (Windows, macOS or Linux). It does not work in VS Code in the browser
+  (vscode.dev, github.dev or Codespaces in the browser).
+- A dark theme. The art is blended with the background using `screen` mode, so on a light theme it nearly disappears.
 
-Se preferir gerar o arquivo a partir do código (requer [Node.js](https://nodejs.org) 18 ou mais novo):
+### 1. Download the extension
+
+Download `fundo-personagem-<version>.zip` from the
+[Releases](https://github.com/noiceartur/VS-code-animated-wallpaper/releases) page and extract the `.vsix` file inside it.
+
+If you'd rather build the file from source (requires [Node.js](https://nodejs.org) 18 or newer):
 
 ```bash
 git clone https://github.com/noiceartur/VS-code-animated-wallpaper.git
@@ -28,105 +33,103 @@ cd VS-code-animated-wallpaper
 npm run package
 ```
 
-### 2. Instale no VS Code
+### 2. Install it in VS Code
 
-**Pela interface:**
+**From the interface:**
 
-1. Abra a aba **Extensions** (`Ctrl+Shift+X`; no macOS, `Cmd+Shift+X`).
-2. Clique nos três pontos (`...`) no canto de cima da aba.
-3. Escolha **Install from VSIX...** e selecione o arquivo `.vsix` que você baixou.
+1. Open the **Extensions** view (`Ctrl+Shift+X`; on macOS, `Cmd+Shift+X`).
+2. Click the three dots (`...`) at the top of the view.
+3. Choose **Install from VSIX...** and select the `.vsix` file you downloaded.
 
-**Ou pelo terminal:**
+**Or from the terminal:**
 
 ```bash
-code --install-extension fundo-personagem-<versão>.vsix
+code --install-extension fundo-personagem-<version>.vsix
 ```
 
-### 3. Primeira abertura
+### 3. First launch
 
-1. Depois de instalar, a extensão aplica o fundo e **recarrega a janela sozinha uma vez**. A tela pisca rapidamente
-   e a personagem aparece.
-2. O VS Code vai mostrar o aviso *"Your Code installation appears to be corrupt"* e pode exibir `[Unsupported]` no
-   título da janela. Isso acontece porque a extensão altera um arquivo de CSS do VS Code. Não é um problema: clique na
-   engrenagem do aviso e escolha **Don't Show Again**.
-3. Se o fundo não aparecer, abra a paleta de comandos (`Ctrl+Shift+P`), rode **Fundo Personagem: Aplicar** e clique
-   em **Recarregar janela**.
+1. After installing, the extension applies the background and **reloads the window by itself once**. The screen
+   blinks quickly and the character appears.
+2. VS Code will show the warning *"Your Code installation appears to be corrupt"* and may show `[Unsupported]` in the
+   window title. This happens because the extension changes one of VS Code's CSS files. It's not a problem: click the
+   gear on the warning and choose **Don't Show Again**.
+3. If the background doesn't appear, open the Command Palette (`Ctrl+Shift+P`), run **Fundo Personagem: Aplicar**
+   (*Apply*) and click **Recarregar janela** (*Reload window*).
 
-### Erro de permissão
+### Permission errors
 
-A extensão precisa gravar na pasta onde o VS Code está instalado. Se aparecer um erro de permissão:
+The extension needs to write to the folder where VS Code is installed. If you get a permission error:
 
-- **Windows:** a instalação "System" (em `Program Files`) é protegida. Abra o VS Code como administrador uma vez e
-  rode **Fundo Personagem: Aplicar**, ou troque para o instalador "User", que não precisa disso.
-- **macOS:** deixe o VS Code na pasta **Aplicativos**. Aberto direto da pasta Downloads, ele roda num local só de
-  leitura.
-- **Linux:** em instalações pelo `.deb` ou `.rpm`, a pasta do VS Code pertence ao root. Dê permissão ao seu usuário
-  (por exemplo, `sudo chown -R $(whoami) /usr/share/code`) ou use a versão `.tar.gz`. A versão **Snap não funciona**,
-  porque os arquivos dela são só de leitura.
+- **Windows:** the "System" installation (in `Program Files`) is protected. Run VS Code as administrator once and run
+  **Fundo Personagem: Aplicar**, or switch to the "User" installer, which doesn't need this.
+- **macOS:** keep VS Code in the **Applications** folder. When opened straight from Downloads, it runs from a read-only
+  location.
+- **Linux:** with `.deb` or `.rpm` installs, the VS Code folder belongs to root. Give your user access (for example,
+  `sudo chown -R $(whoami) /usr/share/code`) or use the `.tar.gz` version. The **Snap version does not work**, because
+  its files are read-only.
 
-### Atualizar
+### Updating
 
-Instale o `.vsix` da versão nova do mesmo jeito, por cima da antiga. Suas configurações são mantidas.
+Install the new version's `.vsix` the same way, on top of the old one. Your settings are kept.
 
-Quando o próprio VS Code atualiza, ele restaura o CSS original. A extensão percebe isso ao abrir, reaplica o fundo e
-recarrega a janela uma vez, sem você fazer nada.
+When VS Code itself updates, it restores the original CSS. The extension notices this on startup, reapplies the
+background and reloads the window once, with nothing for you to do.
 
-### Desinstalar
+### Uninstalling
 
-1. Rode **Fundo Personagem: Remover fundo** (`Ctrl+Shift+P`) e clique em **Recarregar janela**. Isso devolve o CSS
-   original do VS Code.
-2. Depois, desinstale a extensão na aba **Extensions**.
+1. Run **Fundo Personagem: Remover fundo** (*Remove background*) from `Ctrl+Shift+P` and click **Recarregar janela**.
+   This restores VS Code's original CSS.
+2. Then uninstall the extension in the **Extensions** view.
 
-Se desinstalar sem remover antes, o fundo continua aparecendo até a próxima atualização do VS Code. Para tirar na
-hora, instale a extensão de novo e siga o passo 1.
+If you uninstall without removing it first, the background keeps showing until the next VS Code update. To remove it
+right away, install the extension again and follow step 1.
 
-## Destaques técnicos
+## Technical highlights
 
-- **Animação quadro a quadro em CSS puro.** Os 7 desenhos da fumaça e as 5 poses da piscada foram extraídos de um
-  vídeo e viraram PNGs de tela cheia. Uma única `@keyframes` com `steps(1, end)` mostra um quadro por vez, trocando o
-  `background-size` de cada camada entre `0 0` e `100% 100%`.
-- **Uma linha do tempo para duas animações.** A fumaça (20 passos, ciclo de 5 s) e a piscada (0,6 s) têm ritmos
-  diferentes. `linhaDoTempo()` junta as duas num ciclo só, com um número inteiro de piscadas, para o loop fechar sem
-  "pulo".
-- **Sem desalinhamento de subpixel.** Personagem, fumaça e olhos são fundos do mesmo elemento (`body::before`), com o
-  mesmo tamanho e posição. Assim, as camadas ficam alinhadas pixel a pixel em qualquer zoom ou escala do Windows.
-- **Mistura com `screen`.** O preto da arte não altera o tema, então não é preciso recortar o fundo. A opacidade é
-  aplicada uma vez só, no conjunto.
-- **Volta sozinha depois de cada atualização do VS Code.** Veja [abaixo](#por-que-a-janela-recarrega-sozinha).
-- **Config seguro.** Os valores do `fundo.config.json` passam por validação antes de entrar no CSS, para que um valor
-  errado não quebre a interface do VS Code.
+- **Frame-by-frame animation in pure CSS.** The 7 smoke drawings and the 5 blink poses were extracted from a video and
+  turned into full-canvas PNGs. A single `@keyframes` with `steps(1, end)` shows one frame at a time by switching each
+  layer's `background-size` between `0 0` and `100% 100%`.
+- **One timeline for two animations.** The smoke (20 steps, 5 s cycle) and the blink (0.6 s) run at different paces.
+  `linhaDoTempo()` merges them into a single cycle with a whole number of blinks, so the loop closes without a "jump".
+- **No subpixel misalignment.** The character, smoke and eyes are backgrounds of the same element (`body::before`), with
+  the same size and position. The layers stay aligned pixel for pixel at any zoom level or Windows display scale.
+- **`screen` blending.** The black in the art doesn't change the theme, so there's no need to cut out the background.
+  Opacity is applied once, to the whole stack.
+- **Comes back after every VS Code update.** See [below](#why-the-window-reloads-by-itself).
+- **Safe config.** Values from `fundo.config.json` are validated before going into the CSS, so a wrong value can't
+  break the VS Code interface.
 
-## Como funciona
+## How it works
 
-O VS Code não tem API para imagem de fundo. Por isso, a extensão grava um bloco de CSS, entre
-`/* FUNDO-PERSONAGEM:INICIO */` e `/* FUNDO-PERSONAGEM:FIM */`, no arquivo `workbench.desktop.main.css` da instalação
-do VS Code. Antes, guarda um backup do original. As imagens entram no CSS como *data URI*, então não dependem de
+VS Code has no API for background images. So the extension writes a CSS block, between
+`/* FUNDO-PERSONAGEM:INICIO */` and `/* FUNDO-PERSONAGEM:FIM */`, into the `workbench.desktop.main.css` file of the VS
+Code installation, after backing up the original. The images go into the CSS as *data URIs*, so they don't depend on
 `file://`.
 
-### Por que a janela recarrega sozinha
+### Why the window reloads by itself
 
-Temas como o Dracula usam a API de temas, que o VS Code lê a cada inicialização. Este fundo, não: ele fica dentro de um
-arquivo do próprio VS Code, que é substituído a cada atualização. Além disso, a janela lê esse CSS **antes** de as
-extensões rodarem.
+Themes like Dracula use the theme API, which VS Code reads on every startup. This background doesn't: it lives inside
+one of VS Code's own files, which is replaced on every update. On top of that, the window reads this CSS **before**
+extensions run.
 
-Por isso, a extensão é ativada logo na inicialização (`"activationEvents": ["*"]`). Se o bloco sumiu, ela reaplica. Se
-o CSS em disco é mais novo do que o que a janela carregou, ela recarrega a janela uma vez, sem perguntar. O resultado é
-o fundo aparecer já na primeira abertura depois de uma atualização, com uma piscada rápida da janela. Uma marca por
-janela (`workspaceState`) impede que ela recarregue em loop. Isso também vale para várias janelas restauradas ao mesmo
-tempo.
+That's why the extension activates right at startup (`"activationEvents": ["*"]`). If the block is gone, it reapplies
+it. If the CSS on disk is newer than the one the window loaded, it reloads the window once, without asking. The result
+is that the background shows up on the very first launch after an update, with a quick blink of the window. A per-window
+marker (`workspaceState`) prevents reload loops. This also works for several windows restored at the same time.
 
-## Comandos
+## Commands
 
-| Comando (Ctrl+Shift+P)                     | O que faz                                                |
-| ------------------------------------------ | -------------------------------------------------------- |
-| `Fundo Personagem: Abrir config`           | Abre o `fundo.config.json`. Salvar reaplica o fundo.     |
-| `Fundo Personagem: Abrir pasta de imagens` | Mostra a pasta com o config e as imagens.                |
-| `Fundo Personagem: Aplicar`                | Reaplica, por exemplo depois de trocar uma imagem.       |
-| `Fundo Personagem: Remover fundo`          | Restaura o CSS original e deixa `"ativo": false`.        |
+| Command (Ctrl+Shift+P)                     | What it does                                                    |
+| ------------------------------------------ | --------------------------------------------------------------- |
+| `Fundo Personagem: Abrir config`           | *Open config.* Opens `fundo.config.json`. Saving reapplies it.  |
+| `Fundo Personagem: Abrir pasta de imagens` | *Open images folder.* Shows the folder with config and images.  |
+| `Fundo Personagem: Aplicar`                | *Apply.* Reapplies, for example after replacing an image.       |
+| `Fundo Personagem: Remover fundo`          | *Remove background.* Restores the original CSS, sets `"ativo": false`. |
 
-## Configuração (`fundo.config.json`)
+## Configuration (`fundo.config.json`)
 
-Todas as chaves são opcionais. O que não estiver no arquivo usa o padrão.
+Every key is optional. Anything missing from the file uses the default.
 
 ```json
 {
@@ -142,61 +145,65 @@ Todas as chaves são opcionais. O que não estiver no arquivo usa o padrão.
 }
 ```
 
-- `opacidade`: de 0 a 1.
-- `altura`: tamanho da arte na janela. A largura acompanha a proporção da imagem.
-- `direita` e `baixo`: margens.
-- `fumaca.velocidade`: 1 é o ritmo do vídeo, 0.5 a metade e 2 o dobro.
-- `piscar.intervalo`: segundos entre piscadas. O valor é ajustado para caber um número inteiro de piscadas no ciclo da
-  fumaça.
-- Os caminhos de imagem podem ser relativos à pasta do config ou absolutos.
+| Key                  | Meaning                                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------------------ |
+| `ativo`              | *Enabled.* `false` turns the background off.                                                     |
+| `imagem`             | *Image.* The main artwork.                                                                       |
+| `opacidade`          | *Opacity*, from 0 to 1.                                                                          |
+| `altura`             | *Height* of the art in the window. The width follows the image's aspect ratio.                   |
+| `direita`, `baixo`   | *Right* and *bottom* margins.                                                                    |
+| `fumaca.velocidade`  | *Smoke speed.* 1 is the video's pace, 0.5 is half, 2 is double.                                  |
+| `piscar.intervalo`   | *Blink interval* in seconds. Adjusted so a whole number of blinks fits in the smoke cycle.       |
 
-## Imagens
+Image paths can be relative to the config folder or absolute.
 
-Todas usam o mesmo canvas (1610×1080).
+## Images
 
-| Arquivo                         | Conteúdo                                                                   |
+All of them use the same canvas (1610×1080).
+
+| File                            | Contents                                                                   |
 | ------------------------------- | -------------------------------------------------------------------------- |
-| `imagens/personagem.png`        | A arte inteira, com os olhos abertos e **sem fumaça**                      |
-| `imagens/olho-1..5.png`         | As 5 poses da piscada (transparentes fora da região dos olhos)             |
-| `imagens/fumaca-1..7.png`       | Os 7 desenhos da fumaça, com o esmaecimento salvo no canal alfa            |
-| `imagens/olhos.json`            | Poses da piscada e duração de cada uma (`passos`: `[pose, segundos]`)       |
-| `imagens/fumaca.json`           | Desenhos da fumaça e a ordem e duração de cada um (20 passos, 5 s)          |
+| `imagens/personagem.png`        | The full artwork, eyes open and **without smoke**                          |
+| `imagens/olho-1..5.png`         | The 5 blink poses (transparent outside the eye area)                       |
+| `imagens/fumaca-1..7.png`       | The 7 smoke drawings, with the fade stored in the alpha channel            |
+| `imagens/olhos.json`            | Blink poses and how long each lasts (`passos`: `[pose, seconds]`)          |
+| `imagens/fumaca.json`           | Smoke drawings and their order and duration (20 steps, 5 s)                |
 
-Para usar outra animação, troque as imagens e edite o `.json` correspondente. Quando as imagens que vêm com a extensão
-mudam, a cópia antiga do usuário vai para `anteriores-<versão>/`.
+To use a different animation, replace the images and edit the matching `.json`. When the images bundled with the
+extension change, the user's old copy is moved to `anteriores-<version>/`.
 
-## Desenvolvimento
+## Development
 
-Requer Node.js 18 ou mais novo. Não há dependências de runtime.
+Requires Node.js 18 or newer. No runtime dependencies.
 
 ```bash
-npm test          # testes das funções de CSS e da extensão com um VS Code simulado
-npm run package   # gera fundo-personagem-<versão>.vsix com o vsce oficial
+npm test          # tests for the CSS functions and for the extension against a simulated VS Code
+npm run package   # builds fundo-personagem-<version>.vsix with the official vsce
 ```
 
-Estrutura:
+Structure:
 
 ```
-extension.js        ativação, cópia das imagens, injeção/remoção do CSS, recarga automática, comandos
-src/css.js          geração do bloco CSS, linha do tempo da animação, validação do config
-imagens/            arte e quadros da animação
-teste/              testes (node, sem framework)
+extension.js        activation, image copy, CSS injection/removal, automatic reload, commands
+src/css.js          CSS block generation, animation timeline, config validation
+imagens/            artwork and animation frames
+teste/              tests (plain node, no framework)
 ```
 
-Os testes de `teste/extensao.test.js` simulam a primeira instalação, a atualização do VS Code, várias janelas abertas,
-config com erro e falta de permissão.
+The tests in `teste/extensao.test.js` simulate the first install, a VS Code update, several open windows, a broken
+config and missing write permission.
 
-## Créditos
+## Credits
 
-Arte e animação originais de **The Muun**, usadas com a autorização do autor. Apoie o trabalho dele:
+Original art and animation by **The Muun**, used with the author's permission. Support their work:
 
 - YouTube: [The Muun](https://www.youtube.com/channel/UCw3rXoJK9CDhENV-ZifmEDg)
 - Ko-fi: [ko-fi.com/themuunlofi](https://ko-fi.com/themuunlofi)
-- Vídeo original: [youtube.com/watch?v=93Sfl5rRBGw](https://www.youtube.com/watch?v=93Sfl5rRBGw)
+- Original video: [youtube.com/watch?v=93Sfl5rRBGw](https://www.youtube.com/watch?v=93Sfl5rRBGw)
 
-As imagens em `imagens/` e o ícone em `midia/` foram feitos a partir desse vídeo.
+The images in `imagens/` and the icon in `midia/` were made from that video.
 
-## Licença
+## License
 
-O código está sob a licença [MIT](LICENSE). A arte (pastas `imagens/` e `midia/`) pertence a The Muun e **não** está
-incluída nessa licença: não reutilize as imagens sem a autorização do autor.
+The code is under the [MIT](LICENSE) license. The artwork (the `imagens/` and `midia/` folders) belongs to The Muun and
+is **not** covered by that license: don't reuse the images without the author's permission.
